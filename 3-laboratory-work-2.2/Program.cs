@@ -83,7 +83,9 @@ namespace lab02_02
                 1457, -1356, 3500000, 90, 2005, 45, "Севкабель");
 
             car.PrintInfo();
+            Console.WriteLine();
             plane.PrintInfo();
+            Console.WriteLine();
             ship.PrintInfo();
         }
     }
