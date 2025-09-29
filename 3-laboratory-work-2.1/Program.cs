@@ -29,97 +29,43 @@ namespace lab02_01
                 pupils[i].Write();
                 pupils[i].Read();
                 pupils[i].Relax();
+                Console.WriteLine();
             }
         }
-
-
     }
+
     public class Pupil
     {
-        public virtual void Study() 
-        {
-            Console.WriteLine("Ученик учится");
-        }
-        public virtual void Read() 
-        {
-            Console.WriteLine("Ученик читает");
-        }
-        public virtual void Write()
-        {
-            Console.WriteLine("Ученик пишет");
-        }
-        public virtual void Relax()
-        {
-            Console.WriteLine("Ученик отдыхает");
-        }
+        public virtual void Study() => Console.WriteLine("Ученик учится");
+        public virtual void Read() => Console.WriteLine("Ученик читает");
+        public virtual void Write() => Console.WriteLine("Ученик пишет");
+        public virtual void Relax() => Console.WriteLine("Ученик отдыхает");
     }
+
     public class ExcelentPupil : Pupil
     {
-        public override void Study()
-        {
-            Console.WriteLine("Отличник учится");
-        }
-
-        public override void Read()
-        {
-            Console.WriteLine("Отличник читает");
-        }
-
-        public override void Write()
-        {
-            Console.WriteLine("Отличник пишет");
-        }
-
-        public override void Relax()
-        {
-            Console.WriteLine("Отличник отдыхает");
-        }
+        public override void Study() => Console.WriteLine("Отличник учится");
+        public override void Read() => Console.WriteLine("Отличник читает");
+        public override void Write() => Console.WriteLine("Отличник пишет");
+        public override void Relax() => Console.WriteLine("Отличник отдыхает");
     }
 
     public class GoodPupil : Pupil
     {
-        public override void Study()
-        {
-            Console.WriteLine("Хорошист учится");
-        }
-
-        public override void Read()
-        {
-            Console.WriteLine("Хорошист читает");
-        }
-
-        public override void Write()
-        {
-            Console.WriteLine("Хорошист пишет");
-        }
-
-        public override void Relax()
-        {
-            Console.WriteLine("Хорошист отдыхает");
-        }
+        public override void Study() => Console.WriteLine("Хорошист учится");
+        public override void Read() => Console.WriteLine("Хорошист читает");
+        public override void Write() => Console.WriteLine("Хорошист пишет");
+        public override void Relax() => Console.WriteLine("Хорошист отдыхает");
     }
+
     public class BadPupil : Pupil
     {
-        public override void Study()
-        {
-            Console.WriteLine("Двоечник учится");
-        }
-
-        public override void Read()
-        {
-            Console.WriteLine("Двоечник читает");
-        }
-
-        public override void Write()
-        {
-            Console.WriteLine("Двоечник пишет");
-        }
-
-        public override void Relax()
-        {
-            Console.WriteLine("Двоечник отдыхает");
-        }
+        public override void Study() => Console.WriteLine("Двоечник учится");
+        public override void Read() => Console.WriteLine("Двоечник читает");
+        public override void Write() => Console.WriteLine("Двоечник пишет");
+        public override void Relax() => Console.WriteLine("Двоечник отдыхает");
     }
+
     internal class Program
     {
         static void Main(string[] args)
