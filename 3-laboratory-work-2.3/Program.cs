@@ -4,36 +4,18 @@ namespace lab02_03
 {
     class DocumentWorker
     {
-        public virtual void OpenDocument()
-        {
-            Console.WriteLine("Документ открыт");
-        }
-        public virtual void EditDocument()
-        {
-            Console.WriteLine("Редактирование документа доступно в версии Pro");
-        }
-        public virtual void SaveDocument()
-        {
-            Console.WriteLine("Сохранение документа доступно только в версии Pro");
-        }
+        public virtual void OpenDocument() => Console.WriteLine("Документ открыт");
+        public virtual void EditDocument() => Console.WriteLine("Редактирование документа доступно в версии Pro");
+        public virtual void SaveDocument() => Console.WriteLine("Сохранение документа доступно только в версии Pro");
     }
     class ProDocumentWorker : DocumentWorker
     {
-        public override void EditDocument()
-        {
-            Console.WriteLine("Документ отредактирован");
-        }
-        public override void SaveDocument()
-        {
-            Console.WriteLine("Документ сохранен в старом формате, сохранение в остальных форматах доступно в версии Expert");
-        }
+        public override void EditDocument() => Console.WriteLine("Документ отредактирован");
+        public override void SaveDocument() => Console.WriteLine("Документ сохранен в старом формате, сохранение в остальных форматах доступно в версии Expert");
     }
     class ExpertDocumentWorker : ProDocumentWorker
     {
-        public override void SaveDocument()
-        {
-            Console.WriteLine("Документ сохранен в новом формате");
-        }
+        public override void SaveDocument() => Console.WriteLine("Документ сохранен в новом формате");
     }
     class Program
     {
